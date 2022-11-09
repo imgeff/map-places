@@ -3,7 +3,7 @@ require('express-async-errors');
 const { ConflictError } = require('../../helpers/error/customError');
 const { validateSchema } = require('../../helpers/schema/validateSchema');
 const { userExists } = require('../../helpers/validation/userExists');
-const { NewUserSchema } = require('../../schemas/user.schema');
+const { NewUserSchema, UserLoginSchema } = require('../../schemas/user.schema');
 
 async function validateNewUser(req, _res, next) {
   const { name, username, password } = req.body;
@@ -15,6 +15,15 @@ async function validateNewUser(req, _res, next) {
   return next();
 }
 
+async function validateUserLogin(req, _res, next) {
+  const { username, password } = req.body;
+  const userLogin = { username, password };
+  validateSchema(UserLoginSchema)(userLogin);
+
+  return next();
+}
+
 module.exports = {
   validateNewUser,
+  validateUserLogin,
 };
