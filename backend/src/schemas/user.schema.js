@@ -6,6 +6,12 @@ const NewUserSchema = Joi.object({
   password: Joi.string().min(6).required(),
 });
 
+const UserLoginSchema = Joi.object({
+  username: Joi.string().min(1).required(),
+  password: Joi.string().min(6).required(),
+});
+
 module.exports = {
   NewUserSchema,
+  UserLoginSchema,
 };
