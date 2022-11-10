@@ -1,6 +1,6 @@
 require('express-async-errors');
 const { StatusCodes } = require('http-status-codes');
-const { generateToken } = require('../helpers/token/generateToken');
+const { generateToken } = require('../helpers/token');
 const userService = require('../services/user.service');
 
 async function register(req, res) {
