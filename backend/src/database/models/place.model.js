@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
       foreignKey: 'userId',
     },
     name: DataTypes.STRING,
-    latitude: DataTypes.FLOAT,
-    logitude: DataTypes.FLOAT,
+    latitude: DataTypes.DECIMAL(7, 5),
+    longitude: DataTypes.DECIMAL(7, 5),
     status: DataTypes.STRING,
   }, { updatedAt: false });
 
