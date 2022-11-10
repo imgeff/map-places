@@ -16,8 +16,13 @@ async function update(id, place) {
   });
 }
 
+async function destroy(id, userId) {
+  await models.place.destroy({ where: { id, userId } });
+}
+
 module.exports = {
   create,
   read,
   update,
+  destroy,
 };

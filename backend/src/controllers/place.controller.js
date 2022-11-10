@@ -28,8 +28,18 @@ async function update(req, res) {
   return res.status(StatusCodes.OK).json({ message: `Place ${id} successfully updated!` });
 }
 
+async function destroy(req, res) {
+  const { payload: { id: userId } } = req.body;
+  const { id } = req.params;
+
+  await placeService.destroy(id, userId);
+
+  return res.status(StatusCodes.OK).json({ message: `Place ${id} successfully destroied!` });
+}
+
 module.exports = {
   create,
   read,
   update,
+  destroy,
 };
