@@ -1,3 +1,4 @@
+require('express-async-errors');
 const { StatusCodes } = require('http-status-codes');
 const placeService = require('../services/place.service');
 
@@ -18,7 +19,17 @@ async function read(req, res) {
   return res.status(StatusCodes.OK).json(places);
 }
 
+async function update(req, res) {
+  const { id, name, latitude, longitude, status, payload: { id: userId } } = req.body;
+  const place = { name, userId, latitude, longitude, status };
+
+  await placeService.update(id, place);
+
+  return res.status(StatusCodes.OK).json({ message: `Place ${id} successfully updated!` });
+}
+
 module.exports = {
   create,
   read,
+  update,
 };
