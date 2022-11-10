@@ -29,7 +29,18 @@ async function validateUpdatePlace(req, _res, next) {
   return next();
 }
 
+async function validateDestroyPlace(req, _res, next) {
+  const { payload: { id: userId } } = req.body;
+  const { id } = req.params;
+
+  const placeAlreadyExists = await placeExists({ id, userId });
+  if (!placeAlreadyExists) NotFoundError('Place');
+
+  return next();
+}
+
 module.exports = {
   validateNewPlace,
   validateUpdatePlace,
+  validateDestroyPlace,
 };
