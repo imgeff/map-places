@@ -10,6 +10,7 @@ const schemaErrors = [
       'number.base',
       'number.min',
       'number.max',
+      'number.integer',
     ],
   },
   {
