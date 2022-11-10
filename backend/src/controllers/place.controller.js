@@ -10,6 +10,15 @@ async function create(req, res) {
   return res.status(StatusCodes.CREATED).json(placeCreated);
 }
 
+async function read(req, res) {
+  const { payload: { id: userId } } = req.body;
+
+  const places = await placeService.read(userId);
+
+  return res.status(StatusCodes.OK).json(places);
+}
+
 module.exports = {
   create,
+  read,
 };
