@@ -10,7 +10,14 @@ async function read(userId) {
   return places;
 }
 
+async function update(id, place) {
+  await models.place.update(place, {
+    where: { id },
+  });
+}
+
 module.exports = {
   create,
   read,
+  update,
 };
