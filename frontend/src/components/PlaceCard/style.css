@@ -1,0 +1,54 @@
+#place {
+
+  @apply w-full
+    max-w-sm
+    px-5
+    py-5
+    overflow-hidden
+    flex
+    flex-col
+    justify-center
+    items-center
+    gap-2
+    rounded-md
+    border
+    border-solid
+    border-lemon-300
+    hover:scale-[0.98]
+    transition-all ;
+}
+
+#place-buttons {
+
+  @apply w-full
+    flex
+    justify-center
+    items-center
+    gap-10 ;
+}
+
+#place-buttons label {
+
+  @apply cursor-pointer ;
+}
+
+
+#place span {
+
+  @apply w-full
+    flex
+    flex-col
+    justify-center
+    items-center ;
+}
+
+#place span label {
+
+  @apply flex
+    justify-start
+    items-center
+    gap-2
+    text-gray-400
+    font-semibold
+    text-sm ;
+}
