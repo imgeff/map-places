@@ -13,7 +13,7 @@ export function Login() {
   return (
     <div className="login">
       <header>
-        <GlobeHemisphereWest size={80} weight="duotone" color="#04BF8A" />
+        <GlobeHemisphereWest size={80} weight="duotone" color="#9AEBA3" />
         <HeadingLarge>Map Places</HeadingLarge>
         <TextLarge>Faça login ou cadastre-se</TextLarge>
       </header>

@@ -50,7 +50,7 @@ export function FormRegister() {
           Digite seu nome
           <PrimaryInput
             id="name-input"
-            placeholder="name"
+            placeholder="Name"
             type="text"
             name="name"
             value={registerUser.name}
