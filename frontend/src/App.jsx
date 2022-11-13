@@ -1,14 +1,17 @@
 import React from 'react';
 import { Route, Routes } from 'react-router-dom';
-import { Home } from './pages/Home';
+import { Map } from './pages/Map';
 import { Login } from './pages/Login';
+import GlobalProvider from './contexts/global/provider';
 
 function App() {
   return (
-    <Routes>
-      <Route path="/" element={<Login />} />
-      <Route path="/home" element={<Home />} />
-    </Routes>
+    <GlobalProvider>
+      <Routes>
+        <Route path="/" element={<Login />} />
+        <Route path="/map" element={<Map />} />
+      </Routes>
+    </GlobalProvider>
   );
 }
 
