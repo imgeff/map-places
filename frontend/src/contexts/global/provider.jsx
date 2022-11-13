@@ -1,16 +1,16 @@
-import React, { useMemo, useState } from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import { GlobalContext } from './index';
 
 function GlobalProvider({ children }) {
   const [places, setPlaces] = useState([]);
 
-  const contextValue = useMemo(() => ({
+  const contextValue = {
     map: {
       places,
       setPlaces,
     },
-  }), []);
+  };
 
   return (
     <GlobalContext.Provider value={contextValue}>
