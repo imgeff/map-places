@@ -10,7 +10,7 @@ import './style.css';
 
 export function PlaceCard({ place }) {
   const {
-    map: { places, setPlaces },
+    map: { setPlaces },
   } = useContext(GlobalContext);
   const [displayError, setDisplayError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
@@ -21,7 +21,7 @@ export function PlaceCard({ place }) {
       setErrorMessage(response);
       setDisplayError(true);
     } else {
-      setPlaces(places.filter(({ id }) => id !== place.id));
+      setPlaces(response);
     }
   }
 

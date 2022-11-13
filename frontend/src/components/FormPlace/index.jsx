@@ -8,22 +8,28 @@ import { PrimarySelect } from '../../subcomponents/Selects';
 import { TextLarge } from '../../subcomponents/Texts';
 import './style.css';
 
+const placeReseted = {
+  name: '',
+  latitude: '',
+  longitude: '',
+  status: 'Aberto',
+};
+
 export function FormPlace() {
   const {
-    map: { places, setPlaces },
+    map: { setPlaces },
   } = useContext(GlobalContext);
-  const [place, setPlace] = useState({
-    name: '',
-    latitude: '',
-    longitude: '',
-    status: 'Aberto',
-  });
+  const [place, setPlace] = useState(placeReseted);
   const [activeButton, setActiveButton] = useState(false);
   const [displayError, setDisplayError] = useState(false);
   const [errorMessage, setErrorMessage] = useState('');
 
   function handlePlaceData({ target: { name, value } }) {
     setPlace({ ...place, [name]: value });
+  }
+
+  function resetPlace() {
+    setPlace(placeReseted);
   }
 
   function submitMustBeDisabled() {
@@ -42,7 +48,8 @@ export function FormPlace() {
       setErrorMessage(response);
       setDisplayError(true);
     } else {
-      setPlaces([...places, response]);
+      setPlaces(response);
+      resetPlace();
     }
   }
 

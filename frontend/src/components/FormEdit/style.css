@@ -30,7 +30,29 @@
 
 #form-place button {
 
-  @apply my-10 ;
+  @apply w-full
+    py-3
+    px-10
+    flex
+    justify-center
+    items-center
+    gap-3
+    bg-green-400
+    rounded-md
+    font-bold
+    text-gray-900
+    text-base
+    hover:opacity-80
+    transition-all
+    disabled:cursor-not-allowed
+    disabled:opacity-40 ;
+}
+
+#form-place button label {
+
+  @apply font-bold
+    text-gray-900
+    cursor-pointer ;
 }
 
 #form-place .primary-select {
