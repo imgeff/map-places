@@ -19,20 +19,6 @@ export async function login(data) {
   }
 }
 
-export async function createPlace(data) {
-  try {
-    const userToken = getItemLocalStorage('user').token;
-    const response = await axios.post('http://localhost:3001/place/create', data, {
-      headers: {
-        Authorization: userToken,
-      },
-    });
-    return response.data;
-  } catch (error) {
-    return error.response?.data.message || error.message;
-  }
-}
-
 export async function getPlaces() {
   try {
     const userToken = getItemLocalStorage('user').token;
@@ -47,15 +33,29 @@ export async function getPlaces() {
   }
 }
 
-export async function updatePlace(data) {
+export async function createPlace(data) {
   try {
     const userToken = getItemLocalStorage('user').token;
-    const response = await axios.put('http://localhost:3001/place/update', data, {
+    await axios.post('http://localhost:3001/place/create', data, {
       headers: {
         Authorization: userToken,
       },
     });
-    return response.data;
+    return getPlaces();
+  } catch (error) {
+    return error.response?.data.message || error.message;
+  }
+}
+
+export async function updatePlace(data) {
+  try {
+    const userToken = getItemLocalStorage('user').token;
+    await axios.put('http://localhost:3001/place/update', data, {
+      headers: {
+        Authorization: userToken,
+      },
+    });
+    return getPlaces();
   } catch (error) {
     return error.response?.data.message || error.message;
   }
@@ -64,12 +64,12 @@ export async function updatePlace(data) {
 export async function destroyPlace(id) {
   try {
     const userToken = getItemLocalStorage('user').token;
-    const response = await axios.delete(`http://localhost:3001/place/destroy/${id}`, {
+    await axios.delete(`http://localhost:3001/place/destroy/${id}`, {
       headers: {
         Authorization: userToken,
       },
     });
-    return response.data;
+    return getPlaces();
   } catch (error) {
     return error.response?.data.message || error.message;
   }
