@@ -15,7 +15,8 @@
     hover:opacity-80
     transition-all
     disabled:cursor-not-allowed
-    disabled:opacity-40 ;
+    disabled:opacity-40
+    lg:text-sm ;
 }
 
 

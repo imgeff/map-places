@@ -28,7 +28,8 @@
     flex
     flex-col
     justify-center
-    items-center ;
+    items-center
+    text-center ;
 }
 
 #places {
@@ -92,5 +93,6 @@
     border-gray-900
     last:border-l-2
     hover:opacity-80
-    transition-all ;
+    transition-all
+    lg:text-sm ;
 }

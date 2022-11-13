@@ -16,5 +16,7 @@
 
   @apply font-bold
     text-xl
-    text-gray-200 ;
+    text-gray-200
+    text-center
+    lg:text-lg ;
 }

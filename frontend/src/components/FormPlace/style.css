@@ -16,7 +16,8 @@
     justify-center
     gap-2
     font-semibold
-    text-lemon-300 ;
+    text-lemon-300
+    lg:text-sm ;
 }
 
 #coordinates {
