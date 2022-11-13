@@ -35,7 +35,7 @@ export function FormLogin() {
       setDisplayError(true);
     } else {
       setItemLocalStorage('user', response);
-      navigate('/home');
+      navigate('/map');
     }
   }
 
