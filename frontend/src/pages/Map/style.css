@@ -76,12 +76,13 @@
 
   @apply w-full
     h-full
-    flex ;
+    flex
+    items-end ;
 }
 
 #place-manager-container footer > div button {
 
-  @apply min-h-[4.5rem]
+  @apply h-[4.5rem]
     w-full
     text-center
     bg-lemon-300

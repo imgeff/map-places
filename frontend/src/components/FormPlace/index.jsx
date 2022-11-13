@@ -65,7 +65,7 @@ export function FormPlace() {
           id="local-name"
           name="name"
           value={place.name}
-          placeholder="nome do local"
+          placeholder="Ex: Loja Código Fonte"
           onChange={handlePlaceData}
         />
       </label>
@@ -76,7 +76,7 @@ export function FormPlace() {
             id="local-latitude"
             name="latitude"
             value={place.latitude}
-            placeholder="latitude do local"
+            placeholder="Ex: -76.54321"
             maxLength={9}
             onChange={handlePlaceData}
           />
@@ -87,7 +87,7 @@ export function FormPlace() {
             id="local-longitude"
             name="longitude"
             value={place.longitude}
-            placeholder="longitude do local"
+            placeholder="Ex: -12.34567"
             maxLength={9}
             onChange={handlePlaceData}
           />
