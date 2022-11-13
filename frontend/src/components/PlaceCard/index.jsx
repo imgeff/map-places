@@ -2,7 +2,7 @@ import React, { useContext, useState } from 'react';
 import PropTypes from 'prop-types';
 import { Pencil, Trash } from 'phosphor-react';
 import { HeadingSmall } from '../../subcomponents/Headings';
-import { TextLarge, TextMedium, TextSmall } from '../../subcomponents/Texts';
+import { TextLarge, TextMedium } from '../../subcomponents/Texts';
 import { GlobalContext } from '../../contexts/global';
 import { destroyPlace } from '../../helpers/requests';
 import { EditModal } from '../EditModal';
@@ -33,17 +33,14 @@ export function PlaceCard({ place }) {
         <span>
           <label>
             Latitude:
-            <TextSmall>{place.latitude}</TextSmall>
+            <TextMedium>{place.latitude}</TextMedium>
           </label>
           <label>
             Longitude:
-            <TextSmall>{place.longitude}</TextSmall>
+            <TextMedium>{place.longitude}</TextMedium>
           </label>
         </span>
-        <TextMedium>
-          Criado em:
-          {place.createdAt}
-        </TextMedium>
+        <TextMedium>{`Criado em: ${new Date(place.createdAt).toLocaleDateString('pt-BR')}`}</TextMedium>
         <div id="place-buttons">
           <label htmlFor={`edit-modal-${place.id}`} className="daisy-tooltip" data-tip="Editar">
             <Pencil size={24} weight="duotone" color="#9AEBA3" />
