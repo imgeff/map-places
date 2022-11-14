@@ -1,0 +1,21 @@
+.login {
+
+  @apply w-full
+    min-h-screen
+    flex
+    flex-col
+    justify-center
+    items-center ;
+}
+
+.login header {
+
+  @apply w-4/5
+    max-w-2xl
+    p-5
+    flex
+    flex-col
+    justify-center
+    items-center
+    text-center ;
+}

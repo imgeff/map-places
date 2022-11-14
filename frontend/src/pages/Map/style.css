@@ -1,0 +1,16 @@
+#map-screen {
+
+  @apply relative
+    w-full
+    h-screen
+    flex ;
+}
+
+#map-container {
+
+  @apply
+    w-3/4
+    h-screen
+    md:w-full ;
+}
+

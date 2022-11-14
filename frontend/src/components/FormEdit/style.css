@@ -1,0 +1,63 @@
+#form-edit {
+
+  @apply w-4/5
+    py-10
+    flex
+    flex-col
+    justify-center
+    items-center
+    gap-3 ;
+}
+
+#form-edit label {
+
+  @apply w-full
+    flex
+    flex-col
+    justify-center
+    gap-2
+    font-semibold
+    text-lemon-300 ;
+}
+
+#coordinates {
+
+  @apply w-full
+    flex
+    justify-between
+    items-center
+    gap-4 ;
+}
+
+#form-edit button {
+
+  @apply w-full
+    mt-10
+    py-3
+    px-10
+    flex
+    justify-center
+    items-center
+    gap-3
+    bg-lemon-300
+    rounded-md
+    font-bold
+    text-gray-900
+    text-base
+    hover:opacity-80
+    transition-all
+    disabled:cursor-not-allowed
+    disabled:opacity-40 ;
+}
+
+#form-edit button label {
+
+  @apply font-bold
+    text-gray-900
+    cursor-pointer ;
+}
+
+#form-edit .primary-select {
+
+  @apply appearance-none ;
+}

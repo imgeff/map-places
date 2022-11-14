@@ -1,0 +1,30 @@
+#footer-map {
+  -webkit-backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
+  background: rgba(0, 0, 0, 0.6);
+
+  @apply fixed
+    bottom-0
+    w-full
+    h-20
+    hidden
+    flex-col
+    items-center
+    justify-center
+    md:z-[1000]
+    md:flex ;
+}
+
+#footer-map label {
+
+  @apply cursor-pointer
+    flex
+    flex-col
+    justify-center
+    items-center ;
+}
+
+#footer-map label:hover .drop-button {
+
+  @apply scale-90 ;
+}

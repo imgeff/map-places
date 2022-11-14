@@ -1,0 +1,41 @@
+#form-place {
+
+  @apply w-4/5
+    flex
+    flex-col
+    justify-center
+    items-center
+    gap-3 ;
+}
+
+#form-place label {
+
+  @apply w-full
+    flex
+    flex-col
+    justify-center
+    gap-2
+    font-semibold
+    text-lemon-300
+    lg:text-sm ;
+}
+
+#coordinates {
+
+  @apply w-full
+    flex
+    justify-between
+    items-center
+    gap-4 ;
+}
+
+#form-place button {
+
+  @apply my-10
+    text-center ;
+}
+
+#form-place .primary-select {
+
+  @apply appearance-none ;
+}
