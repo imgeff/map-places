@@ -3,7 +3,7 @@ import { getItemLocalStorage } from '../localstorage';
 
 export async function register(data) {
   try {
-    const response = await axios.post('http://localhost:3001/user/register', data);
+    const response = await axios.post('https://map-places-backend-production.up.railway.app/user/register', data);
     return response.data;
   } catch (error) {
     return error.response?.data.message || error.message;
@@ -12,7 +12,7 @@ export async function register(data) {
 
 export async function login(data) {
   try {
-    const response = await axios.post('http://localhost:3001/user/login', data);
+    const response = await axios.post('https://map-places-backend-production.up.railway.app/user/login', data);
     return response.data;
   } catch (error) {
     return error.response?.data.message || error.message;
@@ -22,7 +22,7 @@ export async function login(data) {
 export async function getPlaces() {
   try {
     const userToken = getItemLocalStorage('user').token;
-    const response = await axios.get('http://localhost:3001/place/all', {
+    const response = await axios.get('https://map-places-backend-production.up.railway.app/place/all', {
       headers: {
         Authorization: userToken,
       },
@@ -36,7 +36,7 @@ export async function getPlaces() {
 export async function createPlace(data) {
   try {
     const userToken = getItemLocalStorage('user').token;
-    await axios.post('http://localhost:3001/place/create', data, {
+    await axios.post('https://map-places-backend-production.up.railway.app/place/create', data, {
       headers: {
         Authorization: userToken,
       },
@@ -50,7 +50,7 @@ export async function createPlace(data) {
 export async function updatePlace(data) {
   try {
     const userToken = getItemLocalStorage('user').token;
-    await axios.put('http://localhost:3001/place/update', data, {
+    await axios.put('https://map-places-backend-production.up.railway.app/place/update', data, {
       headers: {
         Authorization: userToken,
       },
@@ -64,7 +64,7 @@ export async function updatePlace(data) {
 export async function destroyPlace(id) {
   try {
     const userToken = getItemLocalStorage('user').token;
-    await axios.delete(`http://localhost:3001/place/destroy/${id}`, {
+    await axios.delete(`https://map-places-backend-production.up.railway.app/place/destroy/${id}`, {
       headers: {
         Authorization: userToken,
       },
