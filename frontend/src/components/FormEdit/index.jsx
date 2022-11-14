@@ -54,7 +54,7 @@ export function FormEdit({ place }) {
 
   return (
     <>
-      <form id="form-place">
+      <form id="form-edit">
         <label htmlFor="local-name">
           Nome
           <PrimaryInput

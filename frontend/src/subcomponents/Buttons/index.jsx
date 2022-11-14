@@ -35,3 +35,20 @@ export function SecondaryButton(props) {
 SecondaryButton.propTypes = {
   children: PropTypes.node.isRequired,
 };
+
+export function DropButton(props) {
+  const { children } = props;
+  return (
+    <button
+      className="drop-button"
+      type="button"
+      {...props}
+    >
+      {children}
+    </button>
+  );
+}
+
+DropButton.propTypes = {
+  children: PropTypes.node.isRequired,
+};

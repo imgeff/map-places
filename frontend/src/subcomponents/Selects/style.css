@@ -9,5 +9,6 @@
     text-sm
     outline-none
     focus:outline
-    focus:outline-green-400 ;
+    focus:outline-green-400
+    lg:text-sm ;
 }

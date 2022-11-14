@@ -10,5 +10,6 @@
     outline-none
     focus:outline
     focus:outline-green-400
-    placeholder:text-gray-600 ;
+    placeholder:text-gray-600
+    lg:text-sm ;
 }
