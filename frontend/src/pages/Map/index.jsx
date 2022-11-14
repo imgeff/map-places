@@ -5,11 +5,19 @@ import {
   Marker,
   Popup,
 } from 'react-leaflet';
+import L from 'leaflet';
 import { GlobalContext } from '../../contexts/global';
 import { PlaceManager } from '../../components/PlaceManager';
 import { FooterMap } from '../../components/FooterMap';
+import MarkerIcon from '../../assets/marker-icon.png';
 import 'leaflet/dist/leaflet.css';
 import './style.css';
+
+function GetIcon() {
+  return L.icon({
+    iconUrl: MarkerIcon,
+  });
+}
 
 export function Map() {
   const { map: { places } } = useContext(GlobalContext);
@@ -26,7 +34,7 @@ export function Map() {
           url="https://tile.openstreetmap.org/{z}/{x}/{y}.png"
         />
         {places.map(({ name, latitude, longitude }) => (
-          <Marker key={name} position={[latitude, longitude]}>
+          <Marker key={name} position={[latitude, longitude]} icon={GetIcon()}>
             <Popup>
               {name}
             </Popup>
