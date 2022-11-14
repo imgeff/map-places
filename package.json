@@ -1,0 +1,22 @@
+{
+  "name": "map-places",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "install:all": "cd ./backend && npm i && cd .. && cd ./frontend && npm i",
+    "start:back": "cd ./backend && npm start",
+    "start:front": "cd ./frontend && npm run dev"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/imgeff/map-places.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/imgeff/map-places/issues"
+  },
+  "homepage": "https://github.com/imgeff/map-places#readme"
+}
