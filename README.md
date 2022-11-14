@@ -56,4 +56,4 @@ Rode a aplicação:
 
 ## Observação
 Edite o arquivo `.env.example` alterando os valores das variáveis de acordo com seu MySQL e 
-cerifique que ele esteja startado.
+certifique que ele esteja startado.
