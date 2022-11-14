@@ -1,0 +1,92 @@
+#place-manager-container {
+
+  @apply w-2/5
+    min-h-screen
+    flex
+    flex-col
+    justify-between
+    items-center
+    bg-gray-900
+    border-0
+    border-solid
+    border-gray-900
+    border-l-2
+    md:hidden ;
+}
+
+#place-manager-container header {
+
+  @apply w-4/5
+    max-w-2xl
+    p-5
+    flex
+    flex-col
+    justify-center
+    items-center
+    text-center ;
+}
+
+#places {
+
+  @apply w-full
+    py-5
+    px-3
+    flex
+    flex-col
+    items-center
+    gap-5
+    overflow-auto ;
+}
+
+#places li {
+
+  @apply w-full
+    flex
+    justify-center
+    items-center ;
+}
+
+#places::-webkit-scrollbar{
+
+  @apply w-1 ;
+}
+
+#places::-webkit-scrollbar-thumb{
+
+  @apply rounded-xl
+    bg-lemon-300 ;
+}
+
+#place-manager-container footer {
+
+  @apply h-24
+    w-full
+    flex
+    flex-col
+    justify-center
+    items-center ;
+}
+
+#place-manager-container footer > div {
+
+  @apply w-full
+    h-full
+    flex
+    items-end ;
+}
+
+#place-manager-container footer > div button {
+
+  @apply h-[4.5rem]
+    w-full
+    text-center
+    bg-lemon-300
+    font-bold
+    border-0
+    border-solid
+    border-gray-900
+    last:border-l-2
+    hover:opacity-80
+    transition-all
+    lg:text-sm ;
+}
