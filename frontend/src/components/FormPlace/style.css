@@ -31,7 +31,8 @@
 
 #form-place button {
 
-  @apply my-10 ;
+  @apply my-10
+    text-center ;
 }
 
 #form-place .primary-select {

@@ -8,7 +8,6 @@
 .daisy-modal-box {
 
   @apply max-w-max
-    min-w-[30rem]
     flex
     flex-col
     justify-center
